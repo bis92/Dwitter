@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "type":"module",
+  "type": "module",
   "description": "twitter clone coding - simple version",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,13 @@
   "author": "bis92",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
