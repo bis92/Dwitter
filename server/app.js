@@ -5,8 +5,7 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import tweetsRouter from './router/tweets.js';
 import authRouter from './router/auth.js';
-
-const saltRounds = 10;
+import { config } from './config.js';
 const app = express();
 
 app.use(express.json());
@@ -26,7 +25,7 @@ app.use((error, req, res, next) => {
     res.sendStatus(500);
 });
 
-const PORT = 5000;
+const PORT = config.host.port || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running at PORT:${PORT}`);
 })
